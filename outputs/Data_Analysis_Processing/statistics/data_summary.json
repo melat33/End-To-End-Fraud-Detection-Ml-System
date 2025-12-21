@@ -1,0 +1,77 @@
+{
+  "fraud_data": {
+    "shape": [
+      151112,
+      11
+    ],
+    "columns": [
+      "user_id",
+      "signup_time",
+      "purchase_time",
+      "purchase_value",
+      "device_id",
+      "source",
+      "browser",
+      "sex",
+      "age",
+      "ip_address",
+      "class"
+    ],
+    "sample_size": 151112,
+    "missing_values": "0"
+  },
+  "creditcard_data": {
+    "shape": [
+      284807,
+      31
+    ],
+    "columns": [
+      "Time",
+      "V1",
+      "V2",
+      "V3",
+      "V4",
+      "V5",
+      "V6",
+      "V7",
+      "V8",
+      "V9",
+      "V10",
+      "V11",
+      "V12",
+      "V13",
+      "V14",
+      "V15",
+      "V16",
+      "V17",
+      "V18",
+      "V19",
+      "V20",
+      "V21",
+      "V22",
+      "V23",
+      "V24",
+      "V25",
+      "V26",
+      "V27",
+      "V28",
+      "Amount",
+      "Class"
+    ],
+    "sample_size": 284807,
+    "missing_values": "0"
+  },
+  "ip_country_data": {
+    "shape": [
+      138846,
+      3
+    ],
+    "columns": [
+      "lower_bound_ip_address",
+      "upper_bound_ip_address",
+      "country"
+    ],
+    "sample_size": 138846,
+    "missing_values": "0"
+  }
+}
