@@ -1,5 +1,5 @@
 {
-    // Editor Settings
+    
     "editor.fontFamily": "'Cascadia Code', 'Consolas', 'Courier New', monospace",
     "editor.fontSize": 14,
     "editor.lineHeight": 24,
@@ -13,7 +13,7 @@
     "editor.renderWhitespace": "trailing",
     "editor.renderControlCharacters": false,
     
-    // Python Settings
+    
     "python.defaultInterpreterPath": "${workspaceFolder}/venv/Scripts/python.exe",
     "python.terminal.activateEnvironment": true,
     "python.terminal.executeInFileDir": true,
@@ -25,7 +25,7 @@
         "${workspaceFolder}/src"
     ],
     
-    // Python Formatting
+    
     "[python]": {
         "editor.defaultFormatter": "ms-python.black-formatter",
         "editor.formatOnSave": true,
@@ -34,12 +34,12 @@
         }
     },
     
-    // Black Formatter Settings
+    
     "black-formatter.args": [
         "--line-length=100"
     ],
     
-    // Pylint Settings
+    
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
     "python.linting.pylintArgs": [
@@ -48,7 +48,7 @@
         "--extension-pkg-whitelist=plotly.graph_objs"
     ],
     
-    // Python Testing
+    
     "python.testing.pytestEnabled": true,
     "python.testing.unittestEnabled": false,
     "python.testing.pytestArgs": [
@@ -57,7 +57,7 @@
         "--tb=short"
     ],
     
-    // File Associations
+    
     "files.associations": {
         "*.sql": "sql",
         "*.yaml": "yaml",
@@ -65,13 +65,13 @@
         "*.json": "jsonc"
     },
     
-    // Terminal Settings
+    
     "terminal.integrated.fontSize": 13,
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.cursorStyle": "line",
     
-    // Workspace Settings
+    
     "files.exclude": {
         "**/__pycache__": true,
         "**/.pytest_cache": true,
@@ -81,50 +81,42 @@
         "**/node_modules": true
     },
     
-    // Git Settings
+
     "git.autofetch": true,
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
     
-    // Extensions Settings
     "python.analysis.autoSearchPaths": true,
     "python.analysis.useLibraryCodeForTypes": true,
     
-    // Streamlit Development Settings
     "streamlit.server.runOnSave": true,
     "streamlit.server.headless": true,
     "streamlit.server.port": 8501,
     
-    // JSON Settings
+     
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
     
-    // YAML Settings
     "[yaml]": {
         "editor.defaultFormatter": "redhat.vscode-yaml",
         "editor.tabSize": 2
     },
     
-    // Markdown Settings
     "[markdown]": {
         "editor.wordWrap": "on",
         "editor.quickSuggestions": false
     },
     
-    // Explorer Settings
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     
-    // Auto Save
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 1000,
     
-    // Color Theme
     "workbench.colorTheme": "Default Dark Modern",
     "workbench.iconTheme": "material-icon-theme",
     
-    // Bracket Pair Colorization
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs": "active"
 }
