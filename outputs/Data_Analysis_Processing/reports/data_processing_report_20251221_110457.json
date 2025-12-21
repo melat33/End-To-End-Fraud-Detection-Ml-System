@@ -1,0 +1,29 @@
+{
+    "timestamp": "20251221_110457",
+    "datasets_processed": {
+        "fraud_data": {
+            "available": true,
+            "rows_original": 151112,
+            "rows_cleaned": 151112,
+            "columns": 12,
+            "duplicates_removed": 0
+        },
+        "credit_data": {
+            "available": true,
+            "rows_original": 284807,
+            "rows_cleaned": 283726,
+            "columns": 31,
+            "duplicates_removed": 1081
+        },
+        "ip_mapping": {
+            "available": true,
+            "rows": 138846
+        }
+    },
+    "output_files": {
+        "data_processed_dir": "D:/10 acadamy/fraud-detection-ml-system\\data/processed",
+        "reports_dir": "D:/10 acadamy/fraud-detection-ml-system\\outputs/Data_Analysis_processing\\reports",
+        "statistics_dir": "D:/10 acadamy/fraud-detection-ml-system\\outputs/Data_Analysis_processing\\statistics",
+        "visualizations_dir": "D:/10 acadamy/fraud-detection-ml-system\\outputs/Data_Analysis_processing\\visualizations"
+    }
+}
