@@ -1,0 +1,6 @@
+2025-12-18 17:32:41,869 - INFO - Loading fraud_data from data\raw\Fraud_Data.csv
+2025-12-18 17:32:48,127 - INFO -   Loaded fraud_data: (151112, 11)
+2025-12-18 17:32:48,127 - INFO - Loading creditcard_data from data\raw\creditcard.csv
+2025-12-18 17:32:53,898 - INFO -   Loaded creditcard_data: (284807, 31)
+2025-12-18 17:32:53,929 - INFO - Loading ip_country_data from data\raw\IpAddress_to_Country.csv
+2025-12-18 17:32:54,422 - INFO -   Loaded ip_country_data: (138846, 3)

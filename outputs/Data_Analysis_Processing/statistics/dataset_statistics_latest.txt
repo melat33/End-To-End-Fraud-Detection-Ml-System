@@ -1,0 +1,33 @@
+============================================================
+DATASET STATISTICS
+============================================================
+
+FRAUD DATASET STATISTICS:
+----------------------------------------
+Rows: 151112
+Columns: 12
+Missing values: 0
+Memory usage: 73.47 MB
+
+Column Data Types:
+  • user_id: int64
+  • signup_time: object
+  • purchase_time: object
+  • purchase_value: int64
+  • device_id: object
+  • source: object
+  • browser: object
+  • sex: object
+  • age: int64
+  • ip_address: float64
+  • class: int64
+  • country: object
+
+============================================================
+
+CREDIT CARD DATASET STATISTICS:
+----------------------------------------
+Rows: 283726
+Columns: 31
+Missing values: 0
+Memory usage: 69.27 MB

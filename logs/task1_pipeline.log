@@ -1,0 +1,190 @@
+2025-12-18 16:13:50,536 - __main__ - ERROR - Make sure your modules are in src/Data_Anlysis_Processing/
+2025-12-18 16:13:50,552 - __main__ - ERROR - Available modules in src/Data_Anlysis_Processing/:
+2025-12-18 16:13:50,582 - __main__ - ERROR -   • data_loader.py
+2025-12-18 16:13:50,609 - __main__ - ERROR -   • data_validator.py
+2025-12-18 16:13:50,621 - __main__ - ERROR -   • feature_engineer.py
+2025-12-18 16:13:50,626 - __main__ - ERROR -   • geolocation_mapper.py
+2025-12-18 16:13:50,648 - __main__ - ERROR -   • imbalance_handler.py
+2025-12-18 16:13:50,667 - __main__ - ERROR -   • visualizer.py
+2025-12-18 16:13:51,249 - __main__ - ERROR - Traceback (most recent call last):
+  File "D:\10 acadamy\fraud-detection-ml-system\scripts\run1_modules.py", line 151, in run
+    DataLoader, DataValidator, GeolocationMapper, FeatureEngineer, ImbalanceHandler, Visualizer = import_modules()
+                                                                                                  ^^^^^^^^^^^^^^^^
+  File "D:\10 acadamy\fraud-detection-ml-system\scripts\run1_modules.py", line 40, in import_modules
+    from Data_Anlysis_Processing.imbalance_handler import ImbalanceHandler
+  File "D:\10 acadamy\fraud-detection-ml-system\src\Data_Anlysis_Processing\imbalance_handler.py", line 7, in <module>
+    from imblearn.over_sampling import SMOTE, RandomOverSampler
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\imblearn\__init__.py", line 54, in <module>
+    from . import (
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\imblearn\combine\__init__.py", line 5, in <module>
+    from ._smote_enn import SMOTEENN
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\imblearn\combine\_smote_enn.py", line 12, in <module>
+    from ..base import BaseSampler
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\imblearn\base.py", line 15, in <module>
+    from .utils import check_sampling_strategy, check_target_type
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\imblearn\utils\__init__.py", line 6, in <module>
+    from ._validation import (
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\imblearn\utils\_validation.py", line 20, in <module>
+    from ..utils._sklearn_compat import _is_pandas_df, check_array
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\imblearn\utils\_sklearn_compat.py", line 256, in <module>
+    from sklearn.utils.validation import (
+ImportError: cannot import name '_is_pandas_df' from 'sklearn.utils.validation' (D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\sklearn\utils\validation.py)
+
+2025-12-18 16:34:22,184 - __main__ - ERROR - Make sure your modules are in src/Data_Anlysis_Processing/
+2025-12-18 16:34:22,185 - __main__ - ERROR - Available modules in src/Data_Anlysis_Processing/:
+2025-12-18 16:34:22,187 - __main__ - ERROR -   • data_loader.py
+2025-12-18 16:34:22,187 - __main__ - ERROR -   • data_validator.py
+2025-12-18 16:34:22,188 - __main__ - ERROR -   • feature_engineer.py
+2025-12-18 16:34:22,190 - __main__ - ERROR -   • geolocation_mapper.py
+2025-12-18 16:34:22,190 - __main__ - ERROR -   • imbalance_handler.py
+2025-12-18 16:34:22,191 - __main__ - ERROR -   • visualizer.py
+2025-12-18 16:34:22,228 - __main__ - ERROR - Traceback (most recent call last):
+  File "D:\10 acadamy\fraud-detection-ml-system\scripts\run1_modules.py", line 151, in run
+    DataLoader, DataValidator, GeolocationMapper, FeatureEngineer, ImbalanceHandler, Visualizer = import_modules()
+                                                                                                  ^^^^^^^^^^^^^^^^
+  File "D:\10 acadamy\fraud-detection-ml-system\scripts\run1_modules.py", line 40, in import_modules
+    from Data_Anlysis_Processing.imbalance_handler import ImbalanceHandler
+  File "D:\10 acadamy\fraud-detection-ml-system\src\Data_Anlysis_Processing\imbalance_handler.py", line 7, in <module>
+    from imblearn.over_sampling import SMOTE, RandomOverSampler
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\imblearn\__init__.py", line 54, in <module>
+    from . import (
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\imblearn\combine\__init__.py", line 5, in <module>
+    from ._smote_enn import SMOTEENN
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\imblearn\combine\_smote_enn.py", line 12, in <module>
+    from ..base import BaseSampler
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\imblearn\base.py", line 15, in <module>
+    from .utils import check_sampling_strategy, check_target_type
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\imblearn\utils\__init__.py", line 6, in <module>
+    from ._validation import (
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\imblearn\utils\_validation.py", line 20, in <module>
+    from ..utils._sklearn_compat import _is_pandas_df, check_array
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\imblearn\utils\_sklearn_compat.py", line 256, in <module>
+    from sklearn.utils.validation import (
+ImportError: cannot import name '_is_pandas_df' from 'sklearn.utils.validation' (D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\sklearn\utils\validation.py)
+
+2025-12-18 17:11:11,547 - __main__ - ERROR - Make sure your modules are in src/Data_Anlysis_Processing/
+2025-12-18 17:11:11,549 - __main__ - ERROR - Available modules in src/Data_Anlysis_Processing/:
+2025-12-18 17:11:11,552 - __main__ - ERROR -   • data_loader.py
+2025-12-18 17:11:11,553 - __main__ - ERROR -   • data_validator.py
+2025-12-18 17:11:11,557 - __main__ - ERROR -   • feature_engineer.py
+2025-12-18 17:11:11,558 - __main__ - ERROR -   • geolocation_mapper.py
+2025-12-18 17:11:11,559 - __main__ - ERROR -   • imbalance_handler.py
+2025-12-18 17:11:11,561 - __main__ - ERROR -   • visualizer.py
+2025-12-18 17:11:11,615 - __main__ - ERROR - Traceback (most recent call last):
+  File "D:\10 acadamy\fraud-detection-ml-system\scripts\run1_modules.py", line 151, in run
+    DataLoader, DataValidator, GeolocationMapper, FeatureEngineer, ImbalanceHandler, Visualizer = import_modules()
+                                                                                                  ^^^^^^^^^^^^^^^^
+  File "D:\10 acadamy\fraud-detection-ml-system\scripts\run1_modules.py", line 37, in import_modules
+    from Data_Anlysis_Processing.data_validator import DataValidator
+  File "D:\10 acadamy\fraud-detection-ml-system\src\Data_Anlysis_Processing\data_validator.py", line 8, in <module>
+    from scipy import stats
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\scipy\__init__.py", line 143, in __getattr__
+    return _importlib.import_module(f'scipy.{name}')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\scipy\stats\__init__.py", line 626, in <module>
+    from ._stats_py import *
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\scipy\stats\_stats_py.py", line 39, in <module>
+    from scipy import sparse
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\scipy\__init__.py", line 143, in __getattr__
+    return _importlib.import_module(f'scipy.{name}')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python311\Lib\importlib\__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\scipy\sparse\__init__.py", line 304, in <module>
+    from ._base import *
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\scipy\sparse\_base.py", line 8, in <module>
+    from ._sputils import (asmatrix, check_reshape_kwargs, check_shape,
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\scipy\sparse\_sputils.py", line 10, in <module>
+    from scipy._lib._util import np_long, np_ulong
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\scipy\_lib\_util.py", line 20, in <module>
+    from numpy.exceptions import AxisError
+ModuleNotFoundError: No module named 'numpy.exceptions'
+
+2025-12-18 17:22:11,004 - __main__ - ERROR - Make sure your modules are in src/Data_Anlysis_Processing/
+2025-12-18 17:22:11,005 - __main__ - ERROR - Available modules in src/Data_Anlysis_Processing/:
+2025-12-18 17:22:11,008 - __main__ - ERROR -   • data_loader.py
+2025-12-18 17:22:11,009 - __main__ - ERROR -   • data_validator.py
+2025-12-18 17:22:11,012 - __main__ - ERROR -   • feature_engineer.py
+2025-12-18 17:22:11,013 - __main__ - ERROR -   • geolocation_mapper.py
+2025-12-18 17:22:11,015 - __main__ - ERROR -   • imbalance_handler.py
+2025-12-18 17:22:11,016 - __main__ - ERROR -   • visualizer.py
+2025-12-18 17:22:11,060 - __main__ - ERROR - Traceback (most recent call last):
+  File "D:\10 acadamy\fraud-detection-ml-system\scripts\run1_modules.py", line 151, in run
+    DataLoader, DataValidator, GeolocationMapper, FeatureEngineer, ImbalanceHandler, Visualizer = import_modules()
+                                                                                                  ^^^^^^^^^^^^^^^^
+  File "D:\10 acadamy\fraud-detection-ml-system\scripts\run1_modules.py", line 40, in import_modules
+    from Data_Anlysis_Processing.imbalance_handler import ImbalanceHandler
+  File "D:\10 acadamy\fraud-detection-ml-system\src\Data_Anlysis_Processing\imbalance_handler.py", line 7, in <module>
+    from imblearn.over_sampling import SMOTE, RandomOverSampler
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\imblearn\__init__.py", line 54, in <module>
+    from . import (
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\imblearn\combine\__init__.py", line 5, in <module>
+    from ._smote_enn import SMOTEENN
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\imblearn\combine\_smote_enn.py", line 12, in <module>
+    from ..base import BaseSampler
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\imblearn\base.py", line 15, in <module>
+    from .utils import check_sampling_strategy, check_target_type
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\imblearn\utils\__init__.py", line 6, in <module>
+    from ._validation import (
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\imblearn\utils\_validation.py", line 20, in <module>
+    from ..utils._sklearn_compat import _is_pandas_df, check_array
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\imblearn\utils\_sklearn_compat.py", line 256, in <module>
+    from sklearn.utils.validation import (
+ImportError: cannot import name '_is_pandas_df' from 'sklearn.utils.validation' (D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\sklearn\utils\validation.py)
+
+2025-12-18 17:24:27,991 - __main__ - ERROR - Make sure your modules are in src/Data_Anlysis_Processing/
+2025-12-18 17:24:27,995 - __main__ - ERROR - Available modules in src/Data_Anlysis_Processing/:
+2025-12-18 17:24:27,998 - __main__ - ERROR -   • data_loader.py
+2025-12-18 17:24:27,999 - __main__ - ERROR -   • data_validator.py
+2025-12-18 17:24:28,000 - __main__ - ERROR -   • feature_engineer.py
+2025-12-18 17:24:28,001 - __main__ - ERROR -   • geolocation_mapper.py
+2025-12-18 17:24:28,002 - __main__ - ERROR -   • imbalance_handler.py
+2025-12-18 17:24:28,003 - __main__ - ERROR -   • visualizer.py
+2025-12-18 17:24:28,028 - __main__ - ERROR - Traceback (most recent call last):
+  File "D:\10 acadamy\fraud-detection-ml-system\scripts\run1_modules.py", line 151, in run
+    DataLoader, DataValidator, GeolocationMapper, FeatureEngineer, ImbalanceHandler, Visualizer = import_modules()
+                                                                                                  ^^^^^^^^^^^^^^^^
+  File "D:\10 acadamy\fraud-detection-ml-system\scripts\run1_modules.py", line 40, in import_modules
+    from Data_Anlysis_Processing.imbalance_handler import ImbalanceHandler
+  File "D:\10 acadamy\fraud-detection-ml-system\src\Data_Anlysis_Processing\imbalance_handler.py", line 7, in <module>
+    from imblearn.over_sampling import SMOTE, RandomOverSampler
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\imblearn\__init__.py", line 54, in <module>
+    from . import (
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\imblearn\combine\__init__.py", line 5, in <module>
+    from ._smote_enn import SMOTEENN
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\imblearn\combine\_smote_enn.py", line 12, in <module>
+    from ..base import BaseSampler
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\imblearn\base.py", line 15, in <module>
+    from .utils import check_sampling_strategy, check_target_type
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\imblearn\utils\__init__.py", line 6, in <module>
+    from ._validation import (
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\imblearn\utils\_validation.py", line 20, in <module>
+    from ..utils._sklearn_compat import _is_pandas_df, check_array
+  File "D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\imblearn\utils\_sklearn_compat.py", line 256, in <module>
+    from sklearn.utils.validation import (
+ImportError: cannot import name '_is_pandas_df' from 'sklearn.utils.validation' (D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\sklearn\utils\validation.py)
+
+2025-12-18 17:27:39,462 - __main__ - INFO - [OK] Configuration loaded from config/config_data_analysis.yaml
+2025-12-18 17:27:39,470 - __main__ - INFO - [DIR] Directory ready: data\raw
+2025-12-18 17:27:39,478 - __main__ - INFO - [DIR] Directory ready: data\processed
+2025-12-18 17:27:39,542 - __main__ - INFO - [DIR] Directory ready: outputs\Data_Analysis_Processing\visualizations
+2025-12-18 17:27:39,558 - __main__ - INFO - [DIR] Directory ready: outputs\Data_Analysis_Processing\reports
+2025-12-18 17:27:39,598 - __main__ - INFO - [DIR] Directory ready: outputs\Data_Analysis_Processing\statistics
+2025-12-18 17:27:39,750 - __main__ - INFO - [START] Starting Data Preprocessing Pipeline
+2025-12-18 17:27:54,249 - __main__ - WARNING - ImbalanceHandler not available: cannot import name '_is_pandas_df' from 'sklearn.utils.validation' (D:\10 acadamy\fraud-detection-ml-system\venv\Lib\site-packages\sklearn\utils\validation.py)
+2025-12-18 17:28:07,977 - __main__ - INFO - [OK] All modules imported successfully
+2025-12-18 17:28:07,977 - __main__ - INFO - 1. Loading data...
+2025-12-18 17:28:07,977 - __main__ - ERROR - [ERROR] Pipeline failed: expected str, bytes or os.PathLike object, not dict
+2025-12-18 17:28:07,985 - __main__ - ERROR - Traceback (most recent call last):
+  File "D:\10 acadamy\fraud-detection-ml-system\scripts\run1_modules.py", line 185, in run
+    loader = DataLoader(self.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\10 acadamy\fraud-detection-ml-system\src\Data_Anlysis_Processing\data_loader.py", line 22, in __init__
+    with open(config_path, 'r') as f:
+         ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected str, bytes or os.PathLike object, not dict
+
