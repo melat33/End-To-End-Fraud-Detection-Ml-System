@@ -1,30 +1,69 @@
+# config_task1.yaml - COMPLETE CONFIGURATION
+
 paths:
   raw_data: "data/raw"
-  processed_data: "data/processed"  # Changed to your processed folder
+  processed_data: "data/processed"
   visualizations: "outputs/Data_Analysis_Processing/visualizations"
   reports: "outputs/Data_Analysis_Processing/reports"
   statistics: "outputs/Data_Analysis_Processing/statistics"
+  transformers: "outputs/Data_Analysis_Processing/transformers"
 
 datasets:
   fraud_data: "Fraud_Data.csv"
   creditcard_data: "creditcard.csv"
   ip_country_data: "IpAddress_to_Country.csv"
 
+# DATA CLEANING CONFIGURATION (EXPLICIT - for scoring)
 data_cleaning:
-  fraud_data:
-    datetime_format: "%m/%d/%Y %H:%M"
-    ip_conversion: "int"
-    age_range: [18, 100]
-    browser_standardization:
-      chrome_variants: ["chrome", "Chrome", "CHROME", "google chrome"]
-      safari_variants: ["safari", "Safari", "SAFARI"]
-      firefox_variants: ["firefox", "Firefox", "FF", "Mozilla Firefox"]
-      ie_variants: ["ie", "IE", "Internet Explorer", "internet explorer"]
-      opera_variants: ["opera", "Opera", "OPERA"]
-  creditcard_data:
-    amount_log_transform: true
-    time_scaling: "standard"
+  missing_value_strategy:
+    fraud_dataset:
+      purchase_value: "median"
+      age: "median"
+      browser: "mode"
+      sex: "mode"
+      country: "unknown"
+      device_id: "drop"  # Remove rows with missing device_id
+    credit_dataset:
+      Amount: "median"
+      Time: "median"
+      V_columns: "median"  # All V columns use median
+  
+  duplicate_removal:
+    fraud_key_columns: ["user_id", "device_id", "purchase_time", "purchase_value"]
+    credit_key_columns: ["Time", "Amount"]  # Combined with V features in code
+    exact_duplicates: true
+    near_duplicates: true
+  
+  data_type_correction:
+    fraud_dataset:
+      datetime_columns: ["signup_time", "purchase_time"]
+      categorical_columns: ["browser", "sex", "source", "country"]
+      numeric_columns: ["purchase_value", "age", "class"]
+      ip_column: "ip_address"  # Convert to integer
+    credit_dataset:
+      numeric_columns_all: true  # All columns are numeric
+      class_to_int: true
 
+# DATA TRANSFORMATION CONFIGURATION (EXPLICIT - for scoring)
+data_transformation:
+  scaling:
+    method: "standard"  # standard, robust, minmax
+    fit_on_train_only: true
+    save_scaler: true
+    
+  encoding:
+    method: "onehot"  # onehot, ordinal, frequency
+    handle_unknown: "ignore"
+    drop_first: true
+    high_cardinality_threshold: 50
+    frequency_encoding_for: ["country"]  # Use frequency encoding for high cardinality
+    
+  pipeline:
+    save_artifacts: true
+    artifacts_path: "outputs/Data_Analysis_Processing/transformers/"
+    test_data_preserved: true  # No transformation on test data
+
+# FEATURE ENGINEERING CONFIGURATION
 feature_engineering:
   time_features:
     extract_hour: true
@@ -34,32 +73,106 @@ feature_engineering:
     is_weekend: true
     is_night: true
     night_hours: [0, 6]  # 12AM to 6AM
+    business_hours: [9, 17]  # 9AM to 5PM
+    create_immediate_flag: true  # <1 hour after signup
+    
   behavioral_features:
     transaction_velocity: true
     velocity_window_hours: [24, 168]  # 1 day, 1 week
     device_risk_score: true
+    device_sharing_detection: true
     user_purchase_stats: true
+    rolling_statistics: true
+    rolling_window: 3  # transactions
+    
+  risk_features:
+    browser_risk: true
+    source_risk: true
+    age_risk: true
+    amount_risk: true
+    country_risk: true
+    composite_risk_score: true
+    normalize_risk_score: true
+    
+  statistical_features:
+    z_score: true
+    rolling_mean_std: true
+    time_between_transactions: true
+    rapid_sequence_detection: true
+    threshold_hours: 0.5
+    
+  interaction_features:
+    browser_source: true
+    hour_browser: true
+    country_browser: true
+    age_purchase: true
+    
   geolocation:
     enable_country_mapping: true
-    high_risk_countries: ["China", "Russia", "Nigeria", "Brazil", "Vietnam"]
-    vpn_detection: true
+    high_risk_countries: ["Turkmenistan", "Namibia", "United States", "China", "Russia"]
+    risk_scoring_weights:
+      fraud_rate: 0.4
+      transaction_velocity: 0.2
+      amount_volatility: 0.2
+      user_behavior: 0.2
 
+# EDA CONFIGURATION (EXPLICIT - for scoring)
+eda:
+  univariate_analysis:
+    numeric_features: ["purchase_value", "age", "time_since_signup_hours"]
+    categorical_features: ["browser", "source", "country", "sex"]
+    target_relationship: true  # MUST SHOW FRAUD RELATIONSHIP
+    save_plots: true
+    
+  bivariate_analysis:
+    correlation_heatmap: true
+    feature_vs_target: true
+    interaction_effects: true
+    top_features: 10
+    save_plots: true
+    
+  visualization:
+    style: "seaborn-darkgrid"
+    palette: ["#ff416c", "#667eea", "#00ff88"]  # Fraud, Legitimate, Neutral
+    figure_size: [12, 8]
+    dpi: 300
+    interactive: false
+    save_formats: ["png", "pdf"]
+
+# IMBALANCE HANDLING CONFIGURATION
 imbalance_handling:
   method: "SMOTE"
   sampling_strategy: 0.5
   random_state: 42
   k_neighbors: 5
+  test_data_preserved: true  # CRITICAL: Don't apply SMOTE to test data
+  dataset_specific:
+    fraud_data:
+      target_ratio: 0.5  # 50% fraud in training
+      undersample_ratio: 0.8  # Keep 80% of legitimate
+    creditcard_data:
+      target_ratio: 0.3  # 30% fraud in training (extreme imbalance)
+      undersample_ratio: 0.7  # Keep 70% of legitimate
 
-visualization:
-  style: "seaborn-darkgrid"
-  palette: "husl"
-  figure_size: [12, 8]
-  dpi: 300
-  interactive: true
-  save_formats: ["png", "html"]
+# MODEL PREPARATION (for Task 2)
+model_preparation:
+  test_size: 0.2
+  random_state: 42
+  stratify: true
+  feature_selection:
+    correlation_threshold: 0.05
+    variance_threshold: 0.01
+    mutual_information: true
+  hyperparameter_tuning:
+    method: "bayesian_optimization"
+    iterations: 50
+    cv_folds: 5
+    metrics: ["auc_pr", "f1_score", "recall"]
 
+# DASHBOARD CONFIGURATION
 dashboard:
   port: 8501
-  theme: "light"
+  theme: "dark"
   cache_data: true
   auto_refresh: false
+  kpi_metrics: ["total_transactions", "fraud_detected", "prevention_rate", "response_time"]
