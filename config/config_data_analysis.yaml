@@ -1,0 +1,65 @@
+paths:
+  raw_data: "data/raw"
+  processed_data: "data/processed"  # Changed to your processed folder
+  visualizations: "outputs/Data_Analysis_Processing/visualizations"
+  reports: "outputs/Data_Analysis_Processing/reports"
+  statistics: "outputs/Data_Analysis_Processing/statistics"
+
+datasets:
+  fraud_data: "Fraud_Data.csv"
+  creditcard_data: "creditcard.csv"
+  ip_country_data: "IpAddress_to_Country.csv"
+
+data_cleaning:
+  fraud_data:
+    datetime_format: "%m/%d/%Y %H:%M"
+    ip_conversion: "int"
+    age_range: [18, 100]
+    browser_standardization:
+      chrome_variants: ["chrome", "Chrome", "CHROME", "google chrome"]
+      safari_variants: ["safari", "Safari", "SAFARI"]
+      firefox_variants: ["firefox", "Firefox", "FF", "Mozilla Firefox"]
+      ie_variants: ["ie", "IE", "Internet Explorer", "internet explorer"]
+      opera_variants: ["opera", "Opera", "OPERA"]
+  creditcard_data:
+    amount_log_transform: true
+    time_scaling: "standard"
+
+feature_engineering:
+  time_features:
+    extract_hour: true
+    extract_day_of_week: true
+    extract_month: true
+    time_since_signup: true
+    is_weekend: true
+    is_night: true
+    night_hours: [0, 6]  # 12AM to 6AM
+  behavioral_features:
+    transaction_velocity: true
+    velocity_window_hours: [24, 168]  # 1 day, 1 week
+    device_risk_score: true
+    user_purchase_stats: true
+  geolocation:
+    enable_country_mapping: true
+    high_risk_countries: ["China", "Russia", "Nigeria", "Brazil", "Vietnam"]
+    vpn_detection: true
+
+imbalance_handling:
+  method: "SMOTE"
+  sampling_strategy: 0.5
+  random_state: 42
+  k_neighbors: 5
+
+visualization:
+  style: "seaborn-darkgrid"
+  palette: "husl"
+  figure_size: [12, 8]
+  dpi: 300
+  interactive: true
+  save_formats: ["png", "html"]
+
+dashboard:
+  port: 8501
+  theme: "light"
+  cache_data: true
+  auto_refresh: false
