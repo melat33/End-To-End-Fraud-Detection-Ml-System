@@ -1,2 +1,0 @@
-country,total_transactions,fraud_transactions,avg_purchase,total_purchase,fraud_rate,risk_level,transaction_velocity,purchase_volatility,fraud_rate_score,transaction_velocity_score,purchase_volatility_score,avg_purchase_score,total_risk_score
-Error,151112,14151,36.93537243898565,5581378,9.364577267192546,HIGH,9.725517864037222,18.32276214866227,50,50,50,50,50.0
